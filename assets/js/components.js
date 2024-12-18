@@ -5,13 +5,14 @@ class Header extends HTMLElement {
 		super();
 	}
 	connectedCallback() {
+		var upNav = this.getAttribute('upNav');
 		this.innerHTML = `
 		<header id="header" class="skel-layers-fixed">
-			<h1><a href="index.html">Home</a></h1>
+			<h1><a href="` + upNav + `">Home</a></h1>
 			<nav id="nav">
 				<ul>
-					<li><a href="music.html">Music</a></li>
-					<li><a href="merch.html">Merch</a></li>
+					<li><a href="` + upNav + `music">Music</a></li>
+					<li><a href="` + upNav + `merch">Merch</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -25,11 +26,12 @@ class Banner extends HTMLElement {
 		super();
 	}
 	connectedCallback() {
+		var upNav = this.getAttribute('upNav');
 		this.innerHTML = `
 		<section id="banner">	
 			<div class="row 50% uniform">
 				<div class="2u"></div>
-				<div class="8u"><span class="image fit"><img src="images/name_transparent_white.png" alt="Bring Us the Stars" /></span></div>
+				<div class="8u"><span class="image fit"><img src="` + upNav + `images/name_transparent_white.png" alt="Bring Us the Stars" /></span></div>
 				<div class="2u"></div>
 			</div>
 			
